@@ -1,8 +1,8 @@
 Property-Management-System
-Full-stack web application built using **Laravel (API)** + **React (Frontend)** with **MySQL** database.
 ---
+Full-stack web application built using **Laravel (API)** + **React (Frontend)** with **MySQL** database.
 
-🚀 Tech Stack
+## 🚀 Tech Stack
 ### Backend
 - Laravel 10 (REST API)
 - MySQL
