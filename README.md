@@ -1,8 +1,8 @@
-# Property-Management-System
+Property-Management-System
 Full-stack web application built using **Laravel (API)** + **React (Frontend)** with **MySQL** database.
 ---
 
-## 🚀 Tech Stack
+🚀 Tech Stack
 ### Backend
 - Laravel 10 (REST API)
 - MySQL
@@ -15,3 +15,7 @@ Full-stack web application built using **Laravel (API)** + **React (Frontend)** 
 - Axios
 - Context API
 - Bootstrap
+
+
+
+By Malka Anjum
