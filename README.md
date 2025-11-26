@@ -93,6 +93,9 @@ Frontend runs at:
 - 💬 **Comment APIs** – Add comments inside tasks for collaboration  
 - 📜 **Activity Log APIs** – Record and fetch user actions on tasks, comments, and project updates  
 
-💡 Developer
-👩‍💻 Malka Anjum
-Full Stack Developer (React + Node.js + MySQL)
+## 💡 Developer
+
+### 👩‍💻 **Malka Anjum**
+**Full Stack Developer (React + Node.js + MySQL)**  
+Crafting intuitive UIs, robust APIs, and clean database structures.
+
