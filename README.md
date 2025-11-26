@@ -82,27 +82,16 @@ Frontend runs at:
 ```
 
 ## 🔗 API Modules
----
-🔐 Authentication
-Register
-Login
-JWT token validation
 
-## 📁 Projects
----
-Create, update, delete projects
-Add/remove team members
-
-## 📋 Tasks
-Add tasks to projects
-Assign user to task
-Change task status
-
-## 💬 Comments
-Add comments under tasks
-
-## 📜 Activity Logs
-Track actions performed by each user
+- 🔐 **Authentication APIs** – User registration, login, and JWT-based authentication  
+- 👤 **User Authorization** – Middleware to validate and protect private routes using tokens  
+- 📁 **Project APIs** – Create, update, delete projects and fetch user-specific projects  
+- 👥 **Project Member APIs** – Add or remove members from a project (Many-to-Many relation)  
+- 📝 **Task APIs** – Add tasks to projects, update task details, and manage task lifecycle  
+- 📌 **Task Assignment API** – Assign tasks to users within a project  
+- 📊 **Task Status API** – Update task status (todo → in-progress → completed)  
+- 💬 **Comment APIs** – Add comments inside tasks for collaboration  
+- 📜 **Activity Log APIs** – Record and fetch user actions on tasks, comments, and project updates  
 
 💡 Developer
 👩‍💻 Malka Anjum
