@@ -97,5 +97,3 @@ Frontend runs at:
 
 ### 👩‍💻 **Malka Anjum**
 **Full Stack Developer (React + Node.js + MySQL)**  
-Crafting intuitive UIs, robust APIs, and clean database structures.
-
