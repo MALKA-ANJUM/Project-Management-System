@@ -81,38 +81,29 @@ Frontend runs at:
 👉 http://localhost:3000
 ```
 
-🔗 API Modules
+## 🔗 API Modules
+---
 🔐 Authentication
-
 Register
-
 Login
-
 JWT token validation
 
-📁 Projects
-
+## 📁 Projects
+---
 Create, update, delete projects
-
 Add/remove team members
 
-📋 Tasks
-
+## 📋 Tasks
 Add tasks to projects
-
 Assign user to task
-
 Change task status
 
-💬 Comments
-
+## 💬 Comments
 Add comments under tasks
 
-📜 Activity Logs
-
+## 📜 Activity Logs
 Track actions performed by each user
 
 💡 Developer
-
 👩‍💻 Malka Anjum
 Full Stack Developer (React + Node.js + MySQL)
