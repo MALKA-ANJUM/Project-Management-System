@@ -1,44 +1,118 @@
-# 🏠 Property Management System  
-A full-stack Property Management System built using **React.js**, **Node.js (Express)**, and **MySQL**.  
-This system manages properties, tenants, maintenance requests, payments, and users with authentication & roles.
+# 📌 Project Management System
+
+A full-stack Project Management web application built using **Node.js + Express** (backend), **React.js** (frontend), and **MySQL + Sequelize ORM** (database).  
+This system allows users to manage projects, tasks, team members, comments, and collaboration with real-time updates.
 
 ---
 
-## 🚀 Tech Stack
+## 🚀 Features
 
-### **Frontend**
-- React.js (Vite)
-- React Router
-- Axios
-- Bootstrap / Tailwind (Bootstrap recommended)
-
-### **Backend**
-- Node.js + Express
-- JSON Web Tokens (JWT)
-- bcrypt for password hashing
-- Multer for image upload
-- MySQL / Sequelize ORM (or MySQL2 package)
-
-### **Database**
-- MySQL
+- 🔐 **JWT-Based Authentication** – Register, Login, Secure API Access  
+- 👥 **Role-Based Access Control** – Admin & User permissions  
+- 📁 **Project Management (CRUD)** – Create and manage multiple projects  
+- 🧑‍🤝‍🧑 **Project Members** – Assign users to projects (Many-to-Many)  
+- 📝 **Task Management** – Add, update, delete tasks under projects  
+- 📌 **Task Assignment** – Assign tasks to team members  
+- 📊 **Task Status Tracking** – todo → in-progress → completed  
+- 💬 **Comments System** – Collaborate on tasks with real-time comments  
+- 📜 **Activity Log System** – Track user actions on tasks & comments  
+- 🎨 **Modern UI** – Built with React + Tailwind/Bootstrap  
+- 🔄 **REST API communication** between React and Node.js
 
 ---
 
-## 📦 Features
+## 🛠️ Tech Stack
 
-### **Authentication**
-- Register + Login
-- JWT-based Auth
-- Role-based access (Admin / User)
+| Layer       | Technology                       |
+|-------------|-----------------------------------|
+| Frontend    | React.js, Axios, Tailwind/Bootstrap |
+| Backend     | Node.js, Express.js               |
+| Database    | MySQL with Sequelize ORM          |
+| Auth        | JWT + bcrypt                      |
 
-### **Modules**
-- User Management
-- Properties CRUD
-- Tenants CRUD
-- Maintenance Requests
-- Payments Tracking
-- File upload (property images)
-- Search + Filters + Pagination
-- Dashboard with stats
+---
 
-By Malka Anjum
+## ⚙️ Installation Guide
+
+### 🔹 1. Clone the Repository
+
+```bash
+git clone https://github.com/YOUR-USERNAME/project-management-system.git
+cd project-management-system
+```
+
+🔹 2. Backend Setup (Node.js + Express)
+```bash
+cd backend
+npm install
+```
+Create a .env file:
+```bash
+PORT=5000
+
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=
+DB_NAME=project_management
+
+JWT_SECRET=your_jwt_secret
+```
+Run database migration (Sequelize sync):
+```bash
+npm run sync
+```
+Start the backend server:
+```bash
+npm run dev
+```
+Backend runs at:
+```bash
+👉 http://localhost:5000
+```
+
+🔹 3. Frontend Setup (React)
+```bash
+cd frontend
+npm install
+npm start
+```
+Frontend runs at:
+```bash
+👉 http://localhost:3000
+```
+
+🔗 API Modules
+🔐 Authentication
+
+Register
+
+Login
+
+JWT token validation
+
+📁 Projects
+
+Create, update, delete projects
+
+Add/remove team members
+
+📋 Tasks
+
+Add tasks to projects
+
+Assign user to task
+
+Change task status
+
+💬 Comments
+
+Add comments under tasks
+
+📜 Activity Logs
+
+Track actions performed by each user
+
+💡 Developer
+
+👩‍💻 Malka Anjum
+Full Stack Developer (React + Node.js + MySQL)
