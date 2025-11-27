@@ -1,4 +1,4 @@
-📌 Project Management System
+# 📌 Project Management System
 
 A full-stack Project Management web application built using **Node.js + Express** (backend), **React.js** (frontend), and **MySQL + Sequelize ORM** (database).  
 This system allows users to manage projects, tasks, team members, comments, and collaboration with real-time updates.
@@ -81,7 +81,7 @@ Frontend runs at:
 👉 http://localhost:3000
 ```
 
-## 🔗 API Modules
+## API Modules
 
 - 🔐 **Authentication APIs** – User registration, login, and JWT-based authentication  
 - 👤 **User Authorization** – Middleware to validate and protect private routes using tokens  
@@ -93,7 +93,7 @@ Frontend runs at:
 - 💬 **Comment APIs** – Add comments inside tasks for collaboration  
 - 📜 **Activity Log APIs** – Record and fetch user actions on tasks, comments, and project updates  
 
-## 💡 Developer
+💡 Developer
 
 ### 👩‍💻 **Malka Anjum**
 **Full Stack Developer (React + Node.js + MySQL)**  
