@@ -5,7 +5,7 @@ const Project = require("./Project");
 
 const ProjectMembers = sequelize.define("ProjectMembers", {});
 
-// Relationships
+// Many-to-Many Relationship
 Project.belongsToMany(User, {
   through: ProjectMembers,
   foreignKey: "project_id",

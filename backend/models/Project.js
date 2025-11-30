@@ -3,7 +3,7 @@ const sequelize = require("../config/db");
 const User = require("./User");
 
 const Project = sequelize.define("Project", {
-  name: {
+  title: {
     type: DataTypes.STRING,
     allowNull: false,
   },
@@ -18,10 +18,16 @@ const Project = sequelize.define("Project", {
 
   end_date: {
     type: DataTypes.DATE,
+  },
+
+  status: {
+    type: DataTypes.STRING,
+    defaultValue: "active",
   }
 });
 
 // Relationship
+// Many-to-Many relation: Project <-> Users (Team members)
 Project.belongsTo(User, { foreignKey: "created_by" });
 User.hasMany(Project, { foreignKey: "created_by" });
 

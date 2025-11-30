@@ -32,7 +32,7 @@ const Task = sequelize.define("Task", {
 Task.belongsTo(Project, { foreignKey: "project_id" });
 Project.hasMany(Task, { foreignKey: "project_id" });
 
-Task.belongsTo(User, { foreignKey: "assigned_to" });
-User.hasMany(Task, { foreignKey: "assigned_to" });
+Task.belongsTo(User, { foreignKey: "created_by" });
+User.hasMany(Task, { foreignKey: "created_by" });
 
 module.exports = Task;
