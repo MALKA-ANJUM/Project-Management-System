@@ -26,3 +26,61 @@ const createTasks = async(req, res) => {
         res.json(500).json({ error: error.message });
     }
 }
+
+// get-task
+const getTaskByProject = async (req, res) => {
+    try {
+        const { projectId } = req.params;
+        
+        const tasks = await Task.findAll({
+            where: { project_id: projectId },
+            include: [
+                {
+                    model: User, attributes: ["id", "name"], as :"creator"
+                },
+                {
+                    model: User, attributes: ["id", "name"], as: "assigned_to"
+                },
+            ]
+        });
+
+        res.json({ tasks });
+    } catch (error) {
+        res.status(500).message(error => error.message);
+    }
+}
+
+const updatetask = async(req, res) => {
+    try {
+        const { taskId } = req.params;
+        const task = Task.findByPk(taskId);
+
+        if(!task){
+            res.status(404).json({ message: "Task not found!"});
+        }
+
+        await task.update(req.body);
+        res.status(200).json({ message: "Task Updated!" });
+    } catch (error) {
+        res.status(500).json({ error: message.error });
+    }
+}
+
+const deleteTask = async(req, res) => {
+    try {
+        const { taskId } = req.params;
+        const task = await Task.findByPk(taskId);
+
+        if(!task){
+            return res.status(404).json({ message: "Task not found!" });
+        }
+
+        await task.destroy();
+
+        res.json({ message: "Task deleted successfully!" });
+    } catch (error) {
+        res.status(500).json({ error: message.error });
+    }
+}
+
+module.exports = { createTasks, getTaskByProject, updatetask, deleteTask };
