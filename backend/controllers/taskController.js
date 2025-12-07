@@ -1,6 +1,7 @@
 const Task = require("../models/Task");
 const project = require("../models/Project");
 const User = require("../models/User");
+const ActivityLog = require("../models/ActivityLog");
 
 const createTasks = async(req, res) => {
     try {
@@ -19,6 +20,13 @@ const createTasks = async(req, res) => {
             due_date,
             priority,
             created_by: req.user.id,
+        });
+
+        await ActivityLog.create({
+            action: "Task created",
+            task_id: task.id,
+            user_id: req.user.id,
+            project_id: project.id,
         });
 
         res.status(201).json({message: "Task created successfully", task});
@@ -76,7 +84,12 @@ const deleteTask = async(req, res) => {
         }
 
         await task.destroy();
-
+        await ActivityLog.create({
+            action: "Task Deleted",
+            task_id: task.id,
+            user_id: req.user.id,
+            project_id: project.id,
+        });
         res.json({ message: "Task deleted successfully!" });
     } catch (error) {
         res.status(500).json({ error: message.error });
