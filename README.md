@@ -5,7 +5,7 @@ This system allows users to manage projects, tasks, team members, comments, and 
 
 ---
 
-##p 🚀 Features
+## 🚀 Features
 
 - 🔐 **JWT-Based Authentication** – Register, Login, Secure API Access  
 - 👥 **Role-Based Access Control** – Admin & User permissions  
