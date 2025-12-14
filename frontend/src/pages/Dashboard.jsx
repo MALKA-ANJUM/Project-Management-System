@@ -1,10 +1,15 @@
-import React from 'react'
+import React from 'react';
+import Navbar from "../components/Navbar";
+import Projects from "./Projects";
 
 const Dashboard = () => {
 	return (
-		<div>
-		
+		<>
+		<Navbar />
+		<div className="container mt-4">
+			<Projects />
 		</div>
+		</>
 	)
 }
 
