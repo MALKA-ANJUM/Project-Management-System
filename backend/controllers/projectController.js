@@ -43,6 +43,7 @@ const getUserProject = async (req, res) => {
             include : [
                 {
                     model: User,
+                     as: "members", // ✅ THIS LINE
                     attributes: ["id", "name", "email"],
                     through: {attributes: []},
                     where: { id: userId},
