@@ -23,11 +23,7 @@ const Projects = () => {
                 <CreateProjectModal refresh={fetchProjects} />
             </div>
             <div className="row">
-                {
-                    projects.map((project) => (
-                        <ProjectCard key={project.id} project={project} />
-                    ))
-                }
+                
             </div>
         </>
     )
