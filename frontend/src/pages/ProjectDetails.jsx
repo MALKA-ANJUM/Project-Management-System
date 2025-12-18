@@ -1,25 +1,24 @@
-import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-import api from '../services/api';
-import Navbar from '../components/Navbar';
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import api from "../services/api";
+import Navbar from "../components/Navbar";
 
 const ProjectDetails = () => {
-    const { id } = useParams();
-    const [project, setProject] = useState(null);
+	const { id } = useParams();
+	const [project, setProject] = useState(null);
 
-    useEffect(() => {
-        api.get(`/projects/${id}`)
-            .then((res) => setProject(res.data));
-    }, [id]);
+	useEffect(() => {
+		api.get(`/projects/${id}`).then((res) => setProject(res.data));
+	}, [id]);
 
-    if(!project) return <p>No Project found</p>
-  return (
-    <div>
-        <Navbar />
-        <h3>{project.title}</h3>
-        <p>{project.description}</p>
-    </div>
-  )
-}
+	if (!project) return <p>No Project found</p>;
+	return (
+		<div>
+			<Navbar />
+			<h3>{project.title}</h3>
+			<p>{project.description}</p>
+		</div>
+	);
+};
 
-export default ProjectDetails
+export default ProjectDetails;

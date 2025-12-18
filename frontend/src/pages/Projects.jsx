@@ -1,32 +1,34 @@
-import React, { useEffect, useState } from 'react'
-import api from '../services/api';
-import ProjectCard from '../components/ProjectCard';
-import CreateProjectModal from '../components/CreateProjectModal';
+import { useEffect, useState } from "react";
+import api from "../services/api";
+import ProjectCard from "../components/ProjectCard";
+import CreateProjectModal from "../components/CreateProjectModal";
 
 const Projects = () => {
-    const [projects, setProjects] = useState([]);
+  const [projects, setProjects] = useState([]);
 
-  
-    const fetchProjects = async () => {
-        const res = await api.get("/projects");
-        setProjects(res.data);
-    };
+  useEffect(() => {
+    fetchProjects();
+  }, []);
 
-    useEffect(() => {
-        fetchProjects();
-    }, []);
+  const fetchProjects = async () => {
+    const res = await api.get("/projects");
+    setProjects(res.data.projects);
+  };
 
-    return (
-        <>
-            <div className="d-flex justify-content-between mb-3">
-                <h3>My Projects</h3>
-                <CreateProjectModal refresh={fetchProjects} />
-            </div>
-            <div className="row">
-                
-            </div>
-        </>
-    )
-}
+  return (
+    <>
+      <div className="d-flex justify-content-between mb-3">
+        <h3>My Projects</h3>
+        <CreateProjectModal refresh={fetchProjects} />
+      </div>
 
-export default Projects
+      <div className="row">
+        {projects.map((project) => (
+          <ProjectCard key={project.id} project={project} />
+        ))}
+      </div>
+    </>
+  );
+};
+
+export default Projects;

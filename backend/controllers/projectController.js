@@ -12,15 +12,15 @@ const createProject = async(req, res) => {
             description, 
             start_date,
             end_date,
-            created_by: req.user_id,
+            created_by: req.user.id,
         });
          // Automatically add creator as project member
-        await project.addUser(req.user.id);
+        await project.addMember(req.user.id);
 
         // Log action
         await ActivityLog.create({
             project_id: project.id,
-            user_id: user.id,
+            user_id: req.user.id,
             action: `Created project ${title}`,
         });
 
@@ -56,6 +56,25 @@ const getUserProject = async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 }
+
+const getProjectById = async (req, res) => {
+  const project = await Project.findByPk(req.params.id, {
+    include: [
+      {
+        model: User,
+        as: "members",
+        attributes: ["id", "name", "email"],
+      },
+    ],
+  });
+
+  if (!project) {
+    return res.status(404).json({ message: "Project not found" });
+  }
+
+  res.json(project);
+};
+
 
 const updateProject = async(req, res) => {
     try {
@@ -116,7 +135,7 @@ const addMember = async(req, res) => {
             return res.status(404).json({ message: "Project or User not found"});
         }
 
-        await project.addUser(userId);
+        await project.addMember(userId);
 
         await ActivityLog.create({
             project_id: projectId,
@@ -155,4 +174,4 @@ const removeMember = async(req, res) => {
     }
 }
 
-module.exports = { createProject, getUserProject, updateProject, deleteProject ,addMember ,removeMember }
+module.exports = { createProject, getUserProject, updateProject, deleteProject ,addMember ,removeMember , getProjectById}
