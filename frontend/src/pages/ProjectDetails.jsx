@@ -15,8 +15,18 @@ const ProjectDetails = () => {
 	return (
 		<div>
 			<Navbar />
-			<h3>{project.title}</h3>
-			<p>{project.description}</p>
+			<div className="container mt-4">
+				<h3>{project.title}</h3>
+
+				<hr />
+
+				<h5>Members</h5>
+				<ul>
+					{project.members.map((m) => (
+					<li key={m.id}>{m.email}</li>
+					))}
+				</ul>
+			</div>
 		</div>
 	);
 };
