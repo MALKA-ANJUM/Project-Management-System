@@ -16,7 +16,7 @@ This system allows users to manage projects, tasks, team members, comments, and 
 - 📊 **Task Status Tracking** – todo → in-progress → completed  
 - 💬 **Comments System** – Collaborate on tasks with real-time comments  
 - 📜 **Activity Log System** – Track user actions on tasks & comments  
-- 🎨 **Modern UI** – Built with React + Tailwind/Bootstrap  
+- 🎨 **Modern UI** – Built with React + Bootstrap  
 - 🔄 **REST API communication** between React and Node.js
 
 ---
