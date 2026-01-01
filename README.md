@@ -25,7 +25,7 @@ This system allows users to manage projects, tasks, team members, comments, and 
 
 | Layer       | Technology                       |
 |-------------|-----------------------------------|
-| Frontend    | React.js, Axios, Tailwind/Bootstrap |
+| Frontend    | React.js, Axios, Bootstrap |
 | Backend     | Node.js, Express.js               |
 | Database    | MySQL with Sequelize ORM          |
 | Auth        | JWT + bcrypt                      |
@@ -85,7 +85,7 @@ Frontend runs at:
 
 - 🔐 **Authentication APIs** – User registration, login, and JWT-based authentication  
 - 👤 **User Authorization** – Middleware to validate and protect private routes using tokens  
-- 📁 **Project APIs** – Create, update, delete projects and fetch user-specific projects  
+- 📁 **Project APIs** – Create, update, delete projects & fetch user-specific projects  
 - 👥 **Project Member APIs** – Add or remove members from a project (Many-to-Many relation)  
 - 📝 **Task APIs** – Add tasks to projects, update task details, and manage task lifecycle  
 - 📌 **Task Assignment API** – Assign tasks to users within a project  
