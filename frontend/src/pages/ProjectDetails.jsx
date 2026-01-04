@@ -1,34 +1,36 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import api from "../services/api";
-import Navbar from "../components/Navbar";
+import TaskCard from "../components/TaskCard";
+import CreateTaskModal from "../components/CreateProjectModal";
 
 const ProjectDetails = () => {
-	const { id } = useParams();
-	const [project, setProject] = useState(null);
+  const { id } = useParams();
+  const [tasks, setTasks] = useState([]);
 
-	useEffect(() => {
-		api.get(`/projects/${id}`).then((res) => setProject(res.data));
-	}, [id]);
+  const fetchTasks = async () => {
+    const res = await api.get(`/tasks/${id}`);
+    setTasks(res.data.tasks);
+  };
 
-	if (!project) return <p>No Project found</p>;
-	return (
-		<div>
-			<Navbar />
-			<div className="container mt-4">
-				<h3>{project.title}</h3>
+  useEffect(() => {
+    fetchTasks();
+  }, []);
 
-				<hr />
+  return (
+    <>
+      <div className="d-flex justify-content-between mb-3">
+        <h3>Tasks</h3>
+        <CreateTaskModal projectId={id} refresh={fetchTasks} />
+      </div>
 
-				<h5>Members</h5>
-				<ul>
-					{project.members.map((m) => (
-					<li key={m.id}>{m.email}</li>
-					))}
-				</ul>
-			</div>
-		</div>
-	);
+      <div className="row">
+        {tasks.map(task => (
+          <TaskCard key={task.id} task={task} refresh={fetchTasks} />
+        ))}
+      </div>
+    </>
+  );
 };
 
 export default ProjectDetails;
