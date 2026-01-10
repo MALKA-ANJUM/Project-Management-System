@@ -19,6 +19,7 @@ This system allows users to manage projects, tasks, team members, comments, and 
 - 📜 **Activity Log System** – Track user actions on tasks & comments  
 - 🎨 **Modern UI** – Built with React + Bootstrap  
 - 🔄 **REST API communication** between React and Node.js
+  
 
 ---
 
