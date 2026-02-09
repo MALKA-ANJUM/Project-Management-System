@@ -1,6 +1,7 @@
 ## 📌 Project Management System
 
 A full-stack Project Management web application built using **Node.js + Express** (backend), **React.js** (frontend), and **MySQL + Sequelize ORM** (database).
+
 This system allows users to manage projects, tasks, team members, comments, and collaboration with real-time updates.
 
 
@@ -19,6 +20,7 @@ This system allows users to manage projects, tasks, team members, comments, and 
 - 📜 **Activity Log System** – Track user actions on tasks & comments  
 - 🎨 **Modern UI** – Built with React + Bootstrap  
 - 🔄 **REST API communication** between React and Node.js
+  
 
 ---
 
@@ -38,7 +40,7 @@ This system allows users to manage projects, tasks, team members, comments, and 
 ### 🔹 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/project-management-system.git
+git clone https://github.com/MALKA-ANJUM/project-management-system.git
 cd project-management-system
 ```
 
