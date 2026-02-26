@@ -1,6 +1,6 @@
 ## 📌 Project Management System
 
-A full-stack Project Management web application built using **Node.js + Express** (backend), **React.js** (frontend), and **MySQL + Sequelize ORM**.
+A full-stack Project Management web application built using **Node.js + Express** , **React.js** , and **MySQL + Sequelize ORM**.
 
 This system allows users to manage projects, tasks, team members, and comments, and collaborate in real time.
 
