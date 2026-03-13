@@ -2,6 +2,7 @@
 
 A full-stack Project Management web application built using **Node.js + Express** , **React.js** , and **MySQL + Sequelize ORM**.
 
+
 This system allows users to manage projects, tasks, team members, and comments, and collaborate in real time.
 
 ---
