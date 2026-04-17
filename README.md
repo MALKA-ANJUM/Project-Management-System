@@ -98,4 +98,4 @@ Frontend runs at:
 💡 Developed By:
 
 ### 👩‍💻 **Malka Anjum**
-**Full [Stack](https://www.facebook.com/reel/1788815891786920/?mibextid=rS40aB7S9Ucbxw6v) Developer (React + Node.js + MySQL)**  
+**FullStack Developer (React + Node.js + MySQL)**  
