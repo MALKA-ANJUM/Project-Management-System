@@ -1,4 +1,4 @@
-## 📌 Project Management System
+##  Project Management System
 
 A full-stack Project Management web application built using **Node.js + Express** , **React.js** , and **MySQL + Sequelize ORM**.
 
